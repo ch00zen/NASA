@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .card h1 {
+      font-size: 1.5rem;
+      color: #1a202c;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #1a202c;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      max-width: 300px; /* Réduction de la longueur des champs */
+      padding: 0.75rem;
+      border: 1px solid #cbd5e0;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #3182ce;
+      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #3182ce;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2b6cb0;
+    }
+
+    .create-account {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #1a202c;
+    }
+
+    .create-account a {
+      color: #3182ce;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .create-account a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Connexion</h1>
+    <form action="Paiement.html" method="POST">
+      <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" id="login" name="login" placeholder="Entrez votre login" autocomplete="off" autocomplete="new-password" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+      </div>
+      <div class="form-group">
+        <label for="profil">Profil</label>
+        <select id="profil" name="profil" required>
+          <option value="Administrateur">Administrateur</option>
+          <option value="Étudiant">Étudiant</option>
+          <option value="Enseignant">Enseignant</option>
+        </select>
+      </div>
+      <button type="submit">Connexion</button>
+    </form>
+  </div>
+
+  <div class="create-account">
+    <p>Pas encore de compte ? <a href="inscription.html">Cliquez ici pour créer un compte</a></p>
+  </div>
+</body>
+</html>

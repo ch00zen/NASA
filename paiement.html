@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enregistrement de Paiement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .card h1 {
+      font-size: 1.5rem;
+      color: #1a202c;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #1a202c;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      max-width: 300px; /* Réduction de la longueur des champs */
+      padding: 0.75rem;
+      border: 1px solid #cbd5e0;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #3182ce;
+      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #3182ce;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2b6cb0;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Enregistrement de Paiement</h1>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="matricule">Matricule</label>
+        <input type="text" id="matricule" name="matricule" placeholder="Ex : 2024-INFO-001" required>
+      </div>
+      <div class="form-group">
+        <label for="filiere">Filière</label>
+        <select id="filiere" name="filiere" required>
+          <option value="Informatique">Informatique</option>
+          <option value="Génie Civil">Génie Civil</option>
+          <option value="Électronique">Électronique</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="niveau">Niveau</label>
+        <select id="niveau" name="niveau" required>
+          <option value="Licence 1">Licence 1</option>
+          <option value="Licence 2">Licence 2</option>
+          <option value="Licence 3">Licence 3</option>
+          <option value="Master 1">Master 1</option>
+          <option value="Master 2">Master 2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="montant">Montant</label>
+        <input type="number" id="montant" name="montant" placeholder="Montant en FCFA" required>
+      </div>
+      <div class="form-group">
+        <label for="objet">Objet</label>
+        <input type="text" id="objet" name="objet" placeholder="Ex : Frais de scolarité" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <button type="submit">Enregistrer</button>
+    </form>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert('Paiement enregistré avec succès !');
+    }
+  </script>
+</body>
+</html>
